@@ -99,6 +99,23 @@ PR received
               → Production deploy? Run Checklist (15 points)
 ```
 
+## Reviewer Subagents (with superpowers)
+
+When the review is dispatched to a subagent, keep the **superpowers:requesting-code-review** process (SHAs, reviewer template, Critical/Important/Minor verdict) and add these standards to the reviewer prompt — the reviewer agent must apply them too:
+
+```
+Review standards (Charte d'Excellence):
+- Context: [INTERNAL or EXTERNAL] code.
+  - INTERNAL: also check Conventional Commits format, atomic commits, GitHub Flow.
+  - EXTERNAL: the client's conventions apply. Flag convention issues as
+    suggestions only, never blockers.
+- Comment on the code, never the person.
+  Never "This is wrong" / "You should have" / "Why did you".
+- Production-bound? Verify the 15-point delivery checklist.
+```
+
+**Merge rule still applies**: the author merges after approval, not the reviewer.
+
 ## References
 
 - **Universal procedures** (all code): See [references/external-procedures.md](references/external-procedures.md) for Procedere 5 (code review), Procedere 11 (pre-push quality), and the full 15-point Production Delivery Checklist.

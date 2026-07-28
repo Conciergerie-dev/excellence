@@ -23,7 +23,7 @@ Then announce "Using [skill/doc] to [purpose]" and follow it.
 
 | Situation | Apply |
 |-----------|-------|
-| Code review, PR, commits, pre-push, deploy readiness | `code-review-excellence` skill |
+| Code review, PR, commits, pre-push, deploy readiness | `code-review-excellence` for the standards — combined with `superpowers:requesting-code-review` for the dispatch process when a reviewer subagent is used |
 | Any mission judgment — incident, delay, client communication, legacy project, overload, disagreement | `excellence-principles` skill |
 | Full doctrine, rituals (debrief, post-mortem), the 17 procedures | `charte_excellence_collectif_dev.md` |
 | Operational templates (CR, checklists, post-mortem, ADR) | `modeles_operationnels.md` |
