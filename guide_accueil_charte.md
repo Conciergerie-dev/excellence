@@ -84,7 +84,7 @@ Le nouveau chapitre de la charte. Deux idées simples :
 
 **S'entraîner dur sans brûler** — Nous travaillons avec exigence. Nous tenons nos délais. Mais nous ne sacrifions pas notre capacité à tenir demain. Un vrai sprint, ça dure dix secondes. Pour nous, ça dure 2 à 3 semaines. Et nous, nous durons.
 
-**Par défaut, nous sommes agressifs** — Quand nous ne savons pas quoi faire, nous faisons quelque chose. Nous ne restons pas bloqués parce que nous n'avons pas toute l'information. Nous avançons avec ce que nous avons, nous nous ajustons en chemin. Ce n'est pas de la témérité. C'est de l'action calculée.
+**Par défaut, nous agissons** — Quand nous ne savons pas quoi faire, nous faisons quelque chose. Nous ne restons pas bloqués parce que nous n'avons pas toute l'information. Nous avançons avec ce que nous avons, nous nous ajustons en chemin. Ce n'est pas de la témérité. C'est de l'action calculée.
 
 > *« Mets ta ceinture. »* — Frank Martin, *Le Transporteur*
 
@@ -117,7 +117,7 @@ Voici ce que nous avons dans le kit :
 
 Tous ces modèles sont dans le document **Modèles Opérationnels**. Nous les sortons quand nous en avons besoin. Nous ne nous obligeons à rien. Mais quand nous les utilisons, nous les utilisons bien.
 
-### 8. Les Procédure — Standard Operating Procedures (5 min)
+### 8. Les Procédures (5 min)
 
 Le dernier élément de la charte. Quinze Procédure — des procédures de base pour ce que nous faisons régulièrement :
 

@@ -101,7 +101,7 @@ On accepte qu'une PR soit rejetée. On n'accepte pas une mauvaise décision sans
 
 ---
 
-## CHAPITRE III — AGRESSIF PAR DÉFAUT
+## CHAPITRE III — AGIR PLUTÔT QU'ATTENDRE
 
 On intervient sur des projets en feu. On dépanne des équipes en perdition. C'est exigeant. C'est intense. Un vrai sprint, ça dure dix secondes. Pour nous, ça dure 2 à 3 semaines. Et nous, nous durons.
 
@@ -110,7 +110,7 @@ On travaille avec exigence. On tient nos délais. On livre la qualité qu'on s'e
 
 > **Exemple réel** : On enchaîne trois projets d'urgence en deux semaines. On livre tout. On est fiers. La semaine suivante, on est à plat. On fait des erreurs qu'on ne ferait pas normalement. **S'entraîner dur, c'est savoir dire « je tiens, mais pas à ce rythme indéfiniment ».**
 
-### Par défaut, on est agressifs
+### Par défaut, on agit
 Quand on ne sait pas quoi faire, on fait quelque chose. On ne reste pas bloqué parce qu'on n'a pas toute l'information. On ne reporte pas parce qu'on a peur de se tromper. On avance avec ce qu'on a, on s'ajuste en chemin. Ce n'est pas de la témérité. C'est de l'action calculée.
 
 > *« Mets ta ceinture. »* — Frank Martin, *Le Transporteur*
@@ -279,7 +279,7 @@ On n'est pas des héros. On est des professionnels. On ne demande pas d'être pa
 | **Post-Mortem** | Investigation complète après incident critique (Modèles Opérationnels, Post-Mortem). |
 | **ADR** | Architecture Decision Record — document traçant les décisions techniques et leur raisonnement. |
 | **Plan de Secours** | Procédure documentée et testée permettant de revenir à l'état stable en cas d'échec de la livraison. |
-| **Procédure** | Standard Operating Procedure — procédure opérationnelle standard, ligne de base adaptable selon le contexte. |
+| **Procédure** | Procédure opérationnelle standard, ligne de base adaptable selon le contexte. |
 | **Spike** | Investigation technique de courte durée (max 2 jours) pour trancher une décision. |
 
 ---
@@ -370,7 +370,7 @@ On n'est pas des héros. On est des professionnels. On ne demande pas d'être pa
 
 ---
 
-## ANNEXE C — STANDARD OPERATING PROCEDURES (Procédure)
+## ANNEXE C — PROCÉDURES
 
 ### Le principe
 

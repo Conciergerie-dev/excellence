@@ -1,6 +1,6 @@
 ---
 name: excellence-principles
-description: Use when doing any non-trivial work in this collectif's context — handling client communication, delays, incidents, legacy or failing projects, prioritization under pressure, technical disagreements, or advising on team process. Applies the Charte d'Excellence doctrine (responsabilite integrale, ego mastery, aggressive-by-default, frame-liberates) so decisions, messages, and plans match the collectif's established rituals and procedures instead of generic advice.
+description: Use when doing any non-trivial work in this collectif's context — handling client communication, delays, incidents, legacy or failing projects, prioritization under pressure, technical disagreements, or advising on team process. Applies the Charte d'Excellence doctrine (responsabilite integrale, ego mastery, agir plutot qu'attendre, frame-liberates) so decisions, messages, and plans match the collectif's established rituals and procedures instead of generic advice.
 ---
 
 # Excellence Principles
@@ -18,7 +18,7 @@ Full source: `charte_excellence_collectif_dev.md` (principles, rituals, 17 proce
 | **Unis pour avancer** | Cover whoever is under water. Covering = removing pressure, not doing their job. Never let the client discover internal frictions before we resolved them. |
 | **Croire en la mission** | No blind work. Dig until the business need is clear; if the mission doesn't hold up, say so to the client. |
 | **Simple — Simplifier** | If a decision can't be explained in two sentences to an outsider, it's too complex. Keep complexity only when justified. |
-| **Agressif par defaut** | When unsure, act with what you have and adjust. Indecision costs more than a reversible wrong decision. But never deploy without a tested rollback plan. |
+| **Agir plutot qu'attendre** | When unsure, act with what you have and adjust. Indecision costs more than a reversible wrong decision. But never deploy without a tested rollback plan. |
 | **Le cadre libere** | Procedures are baselines to deviate from intelligently, not chains. Match rigor to mission size. |
 
 ## Situation Map

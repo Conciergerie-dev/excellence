@@ -10,7 +10,7 @@ La doctrine du collectif : une charte d'excellence, ses modèles opérationnels,
 
 | Fichier | Rôle |
 |---|---|
-| `charte_excellence_collectif_dev.md` | La charte : principes (responsabilité intégrale, maîtrise de l'ego, agressif par défaut, cadre libère), rituels (débrief du vendredi, debrief post-livraison, post-mortem) et les 17 procédures |
+| `charte_excellence_collectif_dev.md` | La charte : principes (responsabilité intégrale, maîtrise de l'ego, agir plutôt qu'attendre, cadre libère), rituels (débrief du vendredi, debrief post-livraison, post-mortem) et les 17 procédures |
 | `modeles_operationnels.md` | Le kit de service : modèles prêts à l'emploi (post-mortem, comptes-rendus, checklist de livraison, ADR, fiches projet…) |
 | `guide_accueil_charte.md` | Guide de conversation pour présenter la charte à quelqu'un qui rejoint le collectif |
 | `guide_animation_retour.md` | Aide-mémoire pour animer un retour d'expérience à trois |

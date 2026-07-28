@@ -14,7 +14,7 @@
   "interface": {
     "displayName": "Doctrine Excellence",
     "shortDescription": "Principes et revue de code selon la Charte d'Excellence du collectif.",
-    "longDescription": "Plugin du collectif regroupant les skills fondés sur la Charte d'Excellence : excellence-principles applique la doctrine générale (responsabilité intégrale, maîtrise de l'ego, agressif par défaut, cadre libère) aux situations de mission — incidents, retards, communication client, projets legacy, priorisation ; code-review-excellence applique les procédures de revue de code, qualité pre-push et checklist de livraison en production.",
+    "longDescription": "Plugin du collectif regroupant les skills fondés sur la Charte d'Excellence : excellence-principles applique la doctrine générale (responsabilité intégrale, maîtrise de l'ego, agir plutôt qu'attendre, cadre libère) aux situations de mission — incidents, retards, communication client, projets legacy, priorisation ; code-review-excellence applique les procédures de revue de code, qualité pre-push et checklist de livraison en production.",
     "developerName": "Collectif Excellence"
   },
   "skills": [

@@ -250,7 +250,7 @@ On se prépare. On se protège. Et on avance.
 ---
 ---
 
-# MODULE 3 — AGRESSIF PAR DÉFAUT
+# MODULE 3 — AGIR PLUTÔT QU'ATTENDRE
 ## Endurer et Avancer
 
 **Durée** : 45 minutes
@@ -273,7 +273,7 @@ Une équipe enchaîne trois projets d'urgence en deux semaines. Ils livrent tout
 
 ---
 
-### 3.2 — Par défaut, on est agressifs
+### 3.2 — Par défaut, on agit
 
 Quand on ne sait pas quoi faire, on fait quelque chose. On ne reste pas bloqué parce qu'on n'a pas toute l'information. On ne reporte pas parce qu'on a peur de se tromper. **On avance avec ce qu'on a, on s'ajuste en chemin.**
 

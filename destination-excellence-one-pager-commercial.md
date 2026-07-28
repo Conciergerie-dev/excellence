@@ -23,9 +23,9 @@ Une méthode claire, disciplinée et actionnable — construite sur le terrain, 
 
 **Responsabilité Intégrale** — On assume avant de chercher un coupable.
 
-**Discipline = Liberté** — Les procédures claires libèrent l'esprit pour l'essentiel.
+**Le cadre libère** — Les procédures claires libèrent l'esprit pour l'essentiel.
 
-**Agressif par défaut** — On avance avec ce qu'on a, on s'ajuste en chemin.
+**Agir plutôt qu'attendre** — On avance avec ce qu'on a, on s'ajuste en chemin.
 
 ---
 
@@ -33,7 +33,7 @@ Une méthode claire, disciplinée et actionnable — construite sur le terrain, 
 
 | Livrable | Ce que ça change concrètement |
 |----------|------------------------------|
-| **17 SOP** | Une procédure pour chaque situation : arriver, livrer, communiquer, documenter, gérer un incident, estimer, prioriser |
+| **17 Procédures** | Une procédure pour chaque situation : arriver, livrer, communiquer, documenter, gérer un incident, estimer, prioriser |
 | **12 modèles opérationnels** | Des templates à remplir, pas à inventer. Fiche projet, checklist de livraison, CR, PV, rapport d'état, ADR, auto-évaluation, post-mortem |
 | **4 rituels** | Le Débrief du vendredi, le Débrief post-livraison, l'Auto-évaluation, la Revue de Charte — la méthode tient dans la durée |
 | **1 charte personnalisable** | Le modèle de charte d'équipe à adapter à votre contexte |
@@ -57,7 +57,7 @@ Une méthode claire, disciplinée et actionnable — construite sur le terrain, 
 
 **Développeur freelance** — gérer seul des missions complexes sans se noyer
 
-**Lead technique** — aligner son équipe avec des SOP concrètes
+**Lead technique** — aligner son équipe avec des Procédures concrètes
 
 **Équipe de 2-5 développeurs** — un langage commun, une culture d'amélioration
 
