@@ -41,9 +41,13 @@ Before requesting a review, the author verifies:
 2. Linter is clean (eslint, prettier, black, etc.)
 3. No `console.log` left behind, no TODO without linked issue
 4. PR title is clear, description added if needed
-5. Author has re-read their own code
-
+5. Author has re-read their own code as a **cold diff pass**, not a skim:
+   - every function is meaningfully reachable — not just syntactically wired
+   - every prop/emit earns its place — no leftovers from an earlier design iteration after a mid-PR refactor
+   - no shape duplicated across files that should be one named type
+6. External API assumptions verified live: when the code depends on an external API's parsing or semantics, verify with one real request before documenting the behavior in a comment or pinning it in a test.
 > **Rule**: Do not ask a peer to review code you have not reviewed yourself.
+> A unit test that only pins your own expected output stays green while being wrong — pin behavior (round-trip: simulate the consumer's decode), not output strings.
 
 ### Step 2 — Review the PR (Procedere 5)
 

@@ -24,6 +24,7 @@ Then announce "Using [skill/doc] to [purpose]" and follow it.
 | Situation | Apply |
 |-----------|-------|
 | Code review, PR, commits, pre-push, deploy readiness | `code-review-excellence` for the standards — combined with `superpowers:requesting-code-review` for the dispatch process when a reviewer subagent is used |
+| Finishing implementation, preparing a PR, or about to hand work to a human reviewer — including mid-plan or end of plan execution (executing-plans, subagent-driven-development, dispatching-parallel-agents) | `code-review-excellence` (author self-check, Procedere 11) — combined with `superpowers:requesting-code-review` for the dispatch before the human review |
 | Any mission judgment — incident, delay, client communication, legacy project, overload, disagreement | `excellence-principles` skill |
 | Full doctrine, rituals (debrief, post-mortem), the 17 procedures | `charte_excellence_collectif_dev.md` |
 | Operational templates (CR, checklists, post-mortem, ADR) | `modeles_operationnels.md` |
@@ -39,6 +40,7 @@ These thoughts mean STOP — you're rationalizing:
 | "The client does it differently" | Adapt our internal conventions; never drop what protects the project. |
 | "No time for the procedure" | Procedures are baselines you deviate from intelligently — not skip silently. |
 | "It's not my fault, it's the legacy/client/framework" | Responsabilite Integrale: what did *you* let through? |
+| "I'm implementing, not reviewing — the standards don't apply yet" | Finishing work IS the trigger. The standards apply before the handoff, not after the reviewer finds the issues. |
 
 ## User Instructions
 

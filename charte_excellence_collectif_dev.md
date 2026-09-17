@@ -590,9 +590,18 @@ Avant chaque push, on vérifie :
 2. **Le linter ne râle pas** (eslint, prettier, black, etc. selon le projet)
 3. **Pas de `console.log` oublié**, pas de TODO sans issue associée
 4. **La PR a un titre clair** et une description si nécessaire
-5. **On a relu son propre code** avant de demander une revue
-
+5. **On a relu son propre code en entier, à froid** — pas un survol :
+   - chaque fonction est atteignable de façon significative (pas juste câblée syntaxiquement)
+   - chaque prop/emit a sa raison d'être — pas de restes d'une itération antérieure après un refactor en cours de PR
+   - pas de forme dupliquée dans plusieurs fichiers qui mériterait un type nommé
+6. **Les hypothèses sur une API externe sont vérifiées en conditions réelles** :
+   quand le code dépend de la sémantique d'une API externe (parsing, encodage),
+   on vérifie avec une vraie requête avant de documenter le comportement dans un
+   commentaire ou de l'épingler dans un test.
 **Règle** : on ne demande pas à un pair de relire du code qu'on n'a pas relu soi-même.
+Un test unitaire qui épingle uniquement sa propre sortie attendue reste vert tout
+en étant faux — on épingle le comportement (round-trip : simuler le décode côté
+consommateur), pas la chaîne de sortie.
 
 **Déviation autorisée** : en hotfix, on peut push avec un TODO explicite et une issue créée immédiatement.
 

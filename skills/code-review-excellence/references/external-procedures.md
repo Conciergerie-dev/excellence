@@ -52,9 +52,14 @@ On critical hotfix, the lead can merge their own PR after quick review. But they
 2. **Linter is clean** (eslint, prettier, black, etc. per project)
 3. **No `console.log` left behind**, no TODO without linked issue
 4. **PR has a clear title** and description if needed
-5. **You have re-read your own code** before asking for review
+5. **You have re-read your own code as a cold diff pass**, not a skim:
+   - every function is meaningfully reachable — not just syntactically wired
+   - every prop/emit earns its place — no leftovers from an earlier design iteration after a mid-PR refactor
+   - no shape duplicated across files that should be one named type
+6. **External API assumptions verified live**: when the code depends on an external API's parsing or semantics, verify with one real request before documenting the behavior in a comment or pinning it in a test.
 
 **Rule**: Do not ask a peer to review code you have not reviewed yourself.
+A unit test that only pins your own expected output stays green while being wrong — pin behavior (round-trip: simulate the consumer's decode), not output strings.
 
 ### Deviation
 
