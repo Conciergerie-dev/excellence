@@ -117,6 +117,9 @@ Review standards (Charte d'Excellence):
     suggestions only, never blockers.
 - Comment on the code, never the person.
   Never "This is wrong" / "You should have" / "Why did you".
+- Re-run the quality checks (linter, tests) on the current HEAD and report
+  the actual output. "It was clean last time" is not a verification —
+  never report a check you did not run this round.
 - Bug found? Frame it as "what did we miss" — on the code, never the
   author. A bug that shipped past review is also yours: "what did I
   let through?"
