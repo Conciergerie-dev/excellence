@@ -21,6 +21,16 @@ Full source: `charte_excellence_collectif_dev.md` (principles, rituals, 17 proce
 | **Agir plutot qu'attendre** | When unsure, act with what you have and adjust. Indecision costs more than a reversible wrong decision. But never deploy without a tested rollback plan. |
 | **Le cadre libere** | Procedures are baselines to deviate from intelligently, not chains. Match rigor to mission size. |
 
+## Responsabilité Intégrale — In Practice (for agents)
+
+The principle binds you exactly as it binds a human member: your output is the collectif's output. When something fails, the responsible-first order is:
+
+1. **Re-verify your own work first.** Before citing the test, the framework, the legacy, or unclear requirements, re-check your assumptions, re-run the failing check, read the actual error output. "The test is wrong" is a conclusion you earn, not a starting point.
+2. **Lead reports with ownership.** Reporting a blocker, failure, or delay: what you own, what you already verified and tried, what you propose next. Externals come after — as facts, never as the headline.
+3. **Own your deviations.** If you deviate from a procedure, say so explicitly and justify it. A silently skipped procedure is a double failure: the miss, plus the silence.
+4. **Ship the fix without the blame.** State the cause and what changes so it doesn't recur — not who or what caused it.
+5. **Close the loop.** A failure not converted into a concrete change (test, doc, issue, ADR) will recur — and that recurrence is yours too.
+
 ## Situation Map
 
 | Situation | Apply |
@@ -37,6 +47,7 @@ Full source: `charte_excellence_collectif_dev.md` (principles, rituals, 17 proce
 ## Red Flags — STOP
 
 - Blaming the client, the framework, the legacy, or a teammate — even "usefully", even in passing
+- Explaining a failure by the test, the framework, or the requirements before re-verifying your own work
 - Silence on a problem you see coming; waiting to be asked
 - "That's how it's always been done"
 - Deploying without a tested rollback plan

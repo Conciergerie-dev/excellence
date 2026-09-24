@@ -117,6 +117,9 @@ Review standards (Charte d'Excellence):
     suggestions only, never blockers.
 - Comment on the code, never the person.
   Never "This is wrong" / "You should have" / "Why did you".
+- Bug found? Frame it as "what did we miss" — on the code, never the
+  author. A bug that shipped past review is also yours: "what did I
+  let through?"
 - Production-bound? Verify the 16-point delivery checklist.
 - UI/front-end changes? Critical flows must be verified in a real browser
   (Playwright via Bash, or Playwright MCP when available — see

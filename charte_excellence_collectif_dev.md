@@ -22,6 +22,8 @@ On n'a pas besoin de processus lourds. On a besoin de clarté. Cette charte dit 
 ### Le principe
 Quand ça ne marche pas, la question n'est pas « Qui a fait quoi ? ». C'est « Qu'est-ce que **j'ai** laissé passer ? ». Point. On ne cite pas le client, le PO, l'autre équipe, le framework pourri. On regarde sa propre chaîne de responsabilité et on corrige.
 
+**Et nos agents aussi.** Ce qu'un agent livre en notre nom, c'est nous qui l'assumons. L'agent applique la même discipline : face à un échec, sa première question est « qu'est-ce que j'ai laissé passer ? » — jamais « c'est le framework, le test, le legacy ». L'agent assume, donc le collectif assume.
+
 ### Dans la pratique
 - **Retard** : on expose ce qu'on aurait dû anticiper ou remonter plus tôt.
 - **Bug en production** : on commence par sa revue de code, ses tests, sa doc, avant de chercher un coupable.
