@@ -428,23 +428,24 @@ ________________________________________________________________________
 | 4 | Les variables d'environnement sont configurées en prod | ☐ Oui / ☐ Non |
 | 5 | La base de données est compatible (migrations testées) | ☐ Oui / ☐ Non |
 | 6 | Les dépendances externes sont opérationnelles | ☐ Oui / ☐ Non |
+| 7 | Les parcours utilisateurs critiques sont validés dans un vrai navigateur (changements UI/front), preuve jointe | ☐ Oui / ☐ Non / ☐ N/A |
 
 ### Plan de secours (Retour en arrière)
 | # | Vérification | Statut |
 |---|-------------|--------|
-| 7 | La version précédente est identifiée et taguée | ☐ Oui / ☐ Non |
-| 8 | La procédure de retour en arrière est documentée et testée | ☐ Oui / ☐ Non |
-| 9 | La base de données peut être restaurée en cas de migration échouée | ☐ Oui / ☐ Non |
-| 10 | Un point de restauration (snapshot) est créé avant livraison | ☐ Oui / ☐ Non |
-| 11 | Le plan de communication en cas d'incident est connu | ☐ Oui / ☐ Non |
+| 8 | La version précédente est identifiée et taguée | ☐ Oui / ☐ Non |
+| 9 | La procédure de retour en arrière est documentée et testée | ☐ Oui / ☐ Non |
+| 10 | La base de données peut être restaurée en cas de migration échouée | ☐ Oui / ☐ Non |
+| 11 | Un point de restauration (snapshot) est créé avant livraison | ☐ Oui / ☐ Non |
+| 12 | Le plan de communication en cas d'incident est connu | ☐ Oui / ☐ Non |
 
 ### Suivi post-livraison
 | # | Vérification | Statut |
 |---|-------------|--------|
-| 12 | Les alertes de monitoring sont actives et configurées | ☐ Oui / ☐ Non |
-| 13 | Les tableaux de suivi sont accessibles | ☐ Oui / ☐ Non |
-| 14 | Quelqu'un est disponible pendant 2h post-livraison | ☐ Oui / ☐ Non |
-| 15 | Le canal d'alerte est surveillé | ☐ Oui / ☐ Non |
+| 13 | Les alertes de monitoring sont actives et configurées | ☐ Oui / ☐ Non |
+| 14 | Les tableaux de suivi sont accessibles | ☐ Oui / ☐ Non |
+| 15 | Quelqu'un est disponible pendant 2h post-livraison | ☐ Oui / ☐ Non |
+| 16 | Le canal d'alerte est surveillé | ☐ Oui / ☐ Non |
 
 ### Déclaration
 Je certifie que cette livraison a été préparée selon les standards du collectif. J'en assume pleinement la responsabilité. En cas d'incident, je m'engage à déclencher immédiatement le plan de secours et à convoquer un retour d'expérience dans les 24h.

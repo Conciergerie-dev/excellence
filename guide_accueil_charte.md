@@ -113,7 +113,7 @@ Voici ce que nous avons dans le kit :
 | **Transfert / Passation** | Quand nous passons le relais | Ce que nous avons fait, les pièges, ce qui reste à faire. Nous ne laissons pas le prochain dans le flou comme nous l'avons été. |
 | **ADR** | Décision technique structurante | Pourquoi nous avons choisi Vue plutôt que React, PostgreSQL plutôt que MySQL. Dans 6 mois, nous saurons pourquoi. |
 | **Post-Mortem** | Incident critique | Déjà présenté plus haut. Investigation complète, pas de blâme. |
-| **Checklist de livraison en production** | Avant chaque déploiement | 15 points à cocher. Pas de livraison sans ça. C'est de la sécurité. |
+| **Checklist de livraison en production** | Avant chaque déploiement | 16 points à cocher. Pas de livraison sans ça. C'est de la sécurité. |
 
 Tous ces modèles sont dans le document **Modèles Opérationnels**. Nous les sortons quand nous en avons besoin. Nous ne nous obligeons à rien. Mais quand nous les utilisons, nous les utilisons bien.
 

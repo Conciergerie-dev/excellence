@@ -1,6 +1,6 @@
 ---
 name: code-review-excellence
-description: Code review and quality assurance based on the Charte d'Excellence methodology. Use when reviewing code, pull requests, commits, or assessing code quality before production deployment. Covers code review kindness, pre-push quality checks, production delivery checklist, and optionally Conventional Commits / atomic commits / Git workflow for internal code. Triggers on any code review request, PR review, commit message review, git workflow advice, or production readiness check.
+description: Code review and quality assurance based on the Charte d'Excellence methodology. Use when reviewing code, pull requests, commits, or assessing code quality before production deployment. Covers code review kindness, pre-push quality checks, browser-based UI verification, production delivery checklist, and optionally Conventional Commits / atomic commits / Git workflow for internal code. Triggers on any code review request, PR review, commit message review, git workflow advice, or production readiness check.
 ---
 
 # Code Review Excellence
@@ -46,13 +46,15 @@ Before requesting a review, the author verifies:
    - every prop/emit earns its place — no leftovers from an earlier design iteration after a mid-PR refactor
    - no shape duplicated across files that should be one named type
 6. External API assumptions verified live: when the code depends on an external API's parsing or semantics, verify with one real request before documenting the behavior in a comment or pinning it in a test.
+7. UI changes: critical flows seen running in a real browser, evidence attached to the PR (see [Browser verification](references/external-procedures.md#browser-verification))
+
 > **Rule**: Do not ask a peer to review code you have not reviewed yourself.
 > A unit test that only pins your own expected output stays green while being wrong — pin behavior (round-trip: simulate the consumer's decode), not output strings.
 
 ### Step 2 — Review the PR (Procedere 5)
 
 1. **Read the PR as a whole** before commenting line by line
-2. **Verify**: logic, tests, documentation, style, obvious security issues
+2. **Verify**: logic, tests, documentation, style, obvious security issues — and for UI changes, browser verification of critical flows with evidence attached (see [Browser verification](references/external-procedures.md#browser-verification))
 3. **Comment with kindness**: on the code, not the person
 4. **Approve if good**. Request changes if needed. **Do not let it sit.**
 5. **Merge is done by the author** after approval, not the reviewer
@@ -73,7 +75,7 @@ Before requesting a review, the author verifies:
 
 ### Step 5 — Production readiness (Checklist de Livraison)
 
-**Always apply** — internal or external. Before any production deployment, verify the 15-point checklist. See [references/external-procedures.md](references/external-procedures.md) for the full checklist.
+**Always apply** — internal or external. Before any production deployment, verify the 16-point checklist. See [references/external-procedures.md](references/external-procedures.md) for the full checklist.
 
 ## Review Comment Style
 
@@ -96,11 +98,11 @@ PR received
     → INTERNAL: Load both files. Full workflow below.
   → Self-reviewed by author? (Proc. 11)
     → Read PR as a whole (Proc. 5)
-      → Logic OK? Tests? Doc? Style? Security?
+      → Logic OK? Tests? Doc? Style? Security? Browser-verified (UI)?
         → Commits atomic? Format correct? (Proc. 8-9) [INTERNAL only]
           → Branch follows GitHub Flow? (Proc. 10) [INTERNAL only]
             → APPROVE or REQUEST CHANGES (within 4h)
-              → Production deploy? Run Checklist (15 points)
+              → Production deploy? Run Checklist (16 points)
 ```
 
 ## Reviewer Subagents (with superpowers)
@@ -115,12 +117,16 @@ Review standards (Charte d'Excellence):
     suggestions only, never blockers.
 - Comment on the code, never the person.
   Never "This is wrong" / "You should have" / "Why did you".
-- Production-bound? Verify the 15-point delivery checklist.
+- Production-bound? Verify the 16-point delivery checklist.
+- UI/front-end changes? Critical flows must be verified in a real browser
+  (Playwright via Bash, or Playwright MCP when available — see
+  external-procedures.md, Browser verification) with evidence attached.
+  Mark N/A explicitly for pure back-end changes.
 ```
 
 **Merge rule still applies**: the author merges after approval, not the reviewer.
 
 ## References
 
-- **Universal procedures** (all code): See [references/external-procedures.md](references/external-procedures.md) for Procedere 5 (code review), Procedere 11 (pre-push quality), and the full 15-point Production Delivery Checklist.
+- **Universal procedures** (all code): See [references/external-procedures.md](references/external-procedures.md) for Procedere 5 (code review), Procedere 11 (pre-push quality), Browser verification (UI changes), and the full 16-point Production Delivery Checklist.
 - **Internal procedures** (collectif only): See [references/internal-procedures.md](references/internal-procedures.md) for Procedere 8 (Conventional Commits), Procedere 9 (atomic commits), and Procedere 10 (Git workflow). Skip when reviewing external code.
