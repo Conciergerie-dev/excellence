@@ -41,6 +41,25 @@ These thoughts mean STOP — you're rationalizing:
 | "No time for the procedure" | Procedures are baselines you deviate from intelligently — not skip silently. |
 | "It's not my fault, it's the legacy/client/framework" | Responsabilite Integrale: what did *you* let through? |
 | "I'm implementing, not reviewing — the standards don't apply yet" | Finishing work IS the trigger. The standards apply before the handoff, not after the reviewer finds the issues. |
+| "Task's done, no need to look back" | "On s'améliore": the closing retro runs before mission work is declared done |
+
+## Closing Retrospective — "On s'améliore"
+
+Before declaring mission work done, answer 3 questions — one line each, in the final message or the PR:
+
+1. **What did I miss?** Responsabilité Intégrale, even when everything went fine.
+2. **What was harder or riskier than it should have been?**
+3. **What changes next time — and where is it written?** A lesson not documented is a lesson lost.
+
+Route the lesson by type:
+
+| Lesson | Route |
+|--------|-------|
+| Project defect or risk (bug, missing test, flaky CI) | Issue in the project tracker, or a note in the PR |
+| Project knowledge the agent lacked (convention, gotcha, command) | The project's `AGENTS.md` — create it if absent. Durable knowledge only, never session noise |
+| Workflow or doctrine gap (a skill, procedure, or prompt that failed us) | Surface it to the collectif: issue or PR on the doctrine-excellence repo. The doctrine improves like everything else |
+
+**Scale to mission size**: trivial task, nothing went wrong → the 3 answers inline, no artifact. Any lesson worth keeping → the routed artifact exists before closing. No artifact, no close.
 
 ## User Instructions
 
