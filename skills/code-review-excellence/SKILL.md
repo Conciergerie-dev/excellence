@@ -1,6 +1,6 @@
 ---
 name: code-review-excellence
-description: Code review and quality assurance based on the Charte d'Excellence methodology. Use when reviewing code, pull requests, commits, or assessing code quality before production deployment. Covers code review kindness, pre-push quality checks, browser-based UI verification, production delivery checklist, and optionally Conventional Commits / atomic commits / Git workflow for internal code. Triggers on any code review request, PR review, commit message review, git workflow advice, or production readiness check.
+description: Code review and quality assurance based on the Charte d'Excellence methodology. Use when reviewing code, pull requests, commits, or assessing code quality before production deployment. Covers code review kindness, pre-push quality checks, live verification of the running app (UI and API), production delivery checklist, and optionally Conventional Commits / atomic commits / Git workflow for internal code. Triggers on any code review request, PR review, commit message review, git workflow advice, or production readiness check.
 ---
 
 # Code Review Excellence
@@ -46,7 +46,7 @@ Before requesting a review, the author verifies:
    - every prop/emit earns its place — no leftovers from an earlier design iteration after a mid-PR refactor
    - no shape duplicated across files that should be one named type
 6. External API assumptions verified live: when the code depends on an external API's parsing or semantics, verify with one real request before documenting the behavior in a comment or pinning it in a test.
-7. UI changes: critical flows seen running in a real browser, evidence attached to the PR (see [Browser verification](references/external-procedures.md#browser-verification))
+7. App launched and flows touched by the change exercised in real conditions — browser for UI changes, real HTTP requests against the running server for API/back-end changes — evidence attached to the PR (see [Live verification](references/external-procedures.md#live-verification))
 
 > **Rule**: Do not ask a peer to review code you have not reviewed yourself.
 > A unit test that only pins your own expected output stays green while being wrong — pin behavior (round-trip: simulate the consumer's decode), not output strings.
@@ -54,7 +54,7 @@ Before requesting a review, the author verifies:
 ### Step 2 — Review the PR (Procedere 5)
 
 1. **Read the PR as a whole** before commenting line by line
-2. **Verify**: logic, tests, documentation, style, obvious security issues — and for UI changes, browser verification of critical flows with evidence attached (see [Browser verification](references/external-procedures.md#browser-verification))
+2. **Verify**: logic, tests, documentation, style, obvious security issues — and launch the app: the flows this PR touches exercised in real conditions (browser for UI changes, real HTTP requests against the running server for API/back-end changes), evidence attached (see [Live verification](references/external-procedures.md#live-verification))
 3. **Comment with kindness**: on the code, not the person
 4. **Approve if good**. Request changes if needed. **Do not let it sit.**
 5. **Merge is done by the author** after approval, not the reviewer
@@ -98,7 +98,7 @@ PR received
     → INTERNAL: Load both files. Full workflow below.
   → Self-reviewed by author? (Proc. 11)
     → Read PR as a whole (Proc. 5)
-      → Logic OK? Tests? Doc? Style? Security? Browser-verified (UI)?
+      → Logic OK? Tests? Doc? Style? Security? Live-verified (app launched, touched flows exercised)?
         → Commits atomic? Format correct? (Proc. 8-9) [INTERNAL only]
           → Branch follows GitHub Flow? (Proc. 10) [INTERNAL only]
             → APPROVE or REQUEST CHANGES (within 4h)
@@ -124,15 +124,18 @@ Review standards (Charte d'Excellence):
   author. A bug that shipped past review is also yours: "what did I
   let through?"
 - Production-bound? Verify the 16-point delivery checklist.
-- UI/front-end changes? Critical flows must be verified in a real browser
-  (Playwright via Bash, or Playwright MCP when available — see
-  external-procedures.md, Browser verification) with evidence attached.
-  Mark N/A explicitly for pure back-end changes.
+- Launch the app and exercise the flows this PR touches in real conditions —
+  browser for UI changes (Playwright via Bash, or Playwright MCP when
+  available), real HTTP requests against the running server for API/back-end
+  changes — with evidence attached (see external-procedures.md, Live
+  verification). N/A only when there is genuinely nothing to run, and say
+  why in the review. Report what you ran and the evidence; "tests are green"
+  is not a live run.
 ```
 
 **Merge rule still applies**: the author merges after approval, not the reviewer.
 
 ## References
 
-- **Universal procedures** (all code): See [references/external-procedures.md](references/external-procedures.md) for Procedere 5 (code review), Procedere 11 (pre-push quality), Browser verification (UI changes), and the full 16-point Production Delivery Checklist.
+- **Universal procedures** (all code): See [references/external-procedures.md](references/external-procedures.md) for Procedere 5 (code review), Procedere 11 (pre-push quality), Live verification of the running app (UI and API), and the full 16-point Production Delivery Checklist.
 - **Internal procedures** (collectif only): See [references/internal-procedures.md](references/internal-procedures.md) for Procedere 8 (Conventional Commits), Procedere 9 (atomic commits), and Procedere 10 (Git workflow). Skip when reviewing external code.

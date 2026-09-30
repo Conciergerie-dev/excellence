@@ -428,7 +428,7 @@ ________________________________________________________________________
 | 4 | Les variables d'environnement sont configurées en prod | ☐ Oui / ☐ Non |
 | 5 | La base de données est compatible (migrations testées) | ☐ Oui / ☐ Non |
 | 6 | Les dépendances externes sont opérationnelles | ☐ Oui / ☐ Non |
-| 7 | Les parcours utilisateurs critiques sont validés dans un vrai navigateur (changements UI/front), preuve jointe | ☐ Oui / ☐ Non / ☐ N/A |
+| 7 | L'app est lancée et les parcours critiques exercés en conditions réelles (navigateur pour l'UI, vraies requêtes HTTP contre le serveur pour l'API/back) — tout changement comportemental, preuve jointe. N/A seulement s'il n'y a rien à lancer, motif explicite | ☐ Oui / ☐ Non / ☐ N/A |
 
 ### Plan de secours (Retour en arrière)
 | # | Vérification | Statut |

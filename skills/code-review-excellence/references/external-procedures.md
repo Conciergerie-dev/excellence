@@ -7,7 +7,7 @@
 1. [Procedure 5 — Revue de code](#procedure-5)
 2. [Procedure 11 — Qualite de code pre-push](#procedure-11)
 3. [Checklist de livraison en production](#checklist-livraison)
-4. [Browser verification (UI changes)](#browser-verification)
+4. [Live verification (lancement réel)](#live-verification)
 
 ---
 
@@ -25,7 +25,7 @@
    - Documentation (README, API docs, inline comments if needed)
    - Style consistency with **project conventions** (not ours — theirs if external)
    - Obvious security issues (SQL injection, XSS, exposed secrets, unsafe deserialization)
-   - **Browser verification for UI changes**: critical user flows seen running in a real browser, evidence attached to the PR. Tests and static analysis verify logic, not behavior in real conditions. See [Browser verification](#browser-verification).
+   - **Live verification**: the app launched, the flows touched by the PR exercised in real conditions — browser for UI changes, real HTTP requests against the running server for API/back-end changes — evidence attached to the PR. Tests and static analysis verify logic, not behavior in real conditions. See [Live verification](#live-verification).
 3. **Comment with kindness**: on the code, not the person. Suggest, don't command. Ask questions before asserting.
 4. **Approve if good**. Request changes if necessary. **Do not let it sit.** A PR unreviewed for 24h is a blocker.
 5. **Merge is done by the author** after approval, not the reviewer.
@@ -59,7 +59,7 @@ On critical hotfix, the lead can merge their own PR after quick review. But they
    - every prop/emit earns its place — no leftovers from an earlier design iteration after a mid-PR refactor
    - no shape duplicated across files that should be one named type
 6. **External API assumptions verified live**: when the code depends on an external API's parsing or semantics, verify with one real request before documenting the behavior in a comment or pinning it in a test.
-6. **UI changes: you have seen the app run in a real browser** — critical flows exercised, evidence attached to the PR. See [Browser verification](#browser-verification).
+7. **You have launched the app and exercised the flows this change touches** — browser for UI changes, real HTTP requests against the running server for API/back-end changes — evidence attached to the PR. N/A only when there is genuinely nothing to run (docs-only, config-only), and the reason is stated. See [Live verification](#live-verification).
 
 **Rule**: Do not ask a peer to review code you have not reviewed yourself.
 A unit test that only pins your own expected output stays green while being wrong — pin behavior (round-trip: simulate the consumer's decode), not output strings.
@@ -85,7 +85,7 @@ On hotfix, you can push with an explicit TODO and an issue created immediately.
 | 4 | Environment variables configured in prod | Yes / No |
 | 5 | Database is compatible (migrations tested) | Yes / No |
 | 6 | External dependencies are operational | Yes / No |
-| 7 | Critical user flows verified in a real browser (UI/front-end changes), evidence attached | Yes / No / N/A |
+| 7 | App launched, critical flows exercised in real conditions (browser for UI, real HTTP requests against the running server for API/back-end) — any behavior change, evidence attached. N/A only when nothing to run, reason stated | Yes / No / N/A |
 
 ### Plan de secours / Rollback (5 points)
 
@@ -117,24 +117,30 @@ On hotfix, you can push with an explicit TODO and an issue created immediately.
 
 ---
 
-<a name="browser-verification"></a>
-## Browser verification (UI / front-end changes)
+<a name="live-verification"></a>
+## Live verification (lancement réel)
 
-**Rule**: Tests and static analysis verify logic, not behavior in real conditions. Rendering, layout, console errors, auth/session flows and multi-step journeys only surface in a real browser. For any UI/front-end change, the author and the reviewer must see the app run — and attach proof.
+**Rule**: Tests and static analysis verify logic, not behavior in real conditions. For any behavior change in an app that can be launched, the app is launched and the flows touched by the change are exercised for real — by the author before asking for review (Proc 11) and independently re-verified by the reviewer before approving (Proc 5). A failure in the live run is a finding with the same weight as a failing test.
 
 ### Scope
 
-- **Applies to**: UI/front-end changes — pages, components, styles, user flows.
-- **Does not apply to**: pure back-end/API changes. Mark N/A explicitly; do not skip silently.
+- **Applies to**: any PR on an app that can be launched — UI/front-end changes (pages, components, styles, user flows) and API/back-end changes (endpoints, jobs, CLI commands) alike.
+- **N/A is the exception, not the default**: it applies only when there is genuinely nothing to run — docs-only, config-only, dependency bumps, pure refactors with no behavior change. The reason must be stated in the PR or review. A silent N/A counts as not done.
+
+### What to exercise
+
+- The app boots clean: no startup errors, no errors logged on the touched path.
+- **At minimum the flows touched by the PR.** This is not a full regression walk — depth follows risk.
 
 ### Execution paths
 
 Pick per context, not per preference:
 
-1. **Default — Playwright via Bash**: write and run a Playwright script against the locally running app. Zero extra infrastructure, and the script is a durable artifact — commit it as an e2e spec when the flow is a keeper.
-2. **Interactive — Playwright MCP**: when available in the environment, drive a persistent browser session (navigate, click, read console, screenshot). Best for exploratory review, where you discover what to check by looking at the page.
+1. **UI changes — Playwright via Bash (default)**: write and run a Playwright script against the locally running app. Zero extra infrastructure, and the script is a durable artifact — commit it as an e2e spec when the flow is a keeper.
+2. **UI changes — Playwright MCP (interactive)**: when available in the environment, drive a persistent browser session (navigate, click, read console, screenshot). Best for exploratory review, where you discover what to check by looking at the page.
+3. **API/back-end changes — real requests against the running server**: boot the server locally and exercise the changed endpoints with real HTTP requests (Playwright request context, curl, or a scripted client). Check status codes, payload shape, and error paths — not just the happy path. Unit tests with in-process or mocked transports do not count: the point is the real wiring (ports, serialization, headers, startup).
 
 ### Evidence
 
-- Attach proof to the PR: screenshots, page snapshots, or the e2e spec plus its run output.
-- Same standard as re-running the linter: a browser check you did not run this round is not a verification.
+- Attach proof to the PR: screenshots, page snapshots, the e2e spec plus its run output, or the request/response transcript for API checks.
+- Same standard as re-running the linter: a live check you did not run this round is not a verification. "Tests are green" is not evidence of a live run — the tests were green for every bug that only surfaced at runtime.

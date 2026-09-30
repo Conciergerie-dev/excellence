@@ -488,7 +488,7 @@ On applique le principe Unis pour avancer (Chapitre I) avec l'équipe client : q
 **Chaque PR doit être revue par au moins 1 pair avant merge.**
 
 1. Lire la PR dans son ensemble avant de commenter ligne par ligne
-2. Vérifier : logique, tests, documentation, style, sécurité évidente — et pour tout changement UI : les parcours critiques vérifiés dans un vrai navigateur, preuve jointe à la PR
+2. Vérifier : logique, tests, documentation, style, sécurité évidente — et pour tout changement comportemental dans une app lançable : l'app démarrée, les parcours touchés exercés en conditions réelles (navigateur pour l'UI, vraies requêtes HTTP contre le serveur lancé pour l'API/back), preuve jointe à la PR. N/A seulement s'il n'y a rien à lancer (docs, config), motif explicite.
 3. Commenter avec bienveillance : sur le code, pas sur la personne
 4. Approuver si c'est bon. Demander des changements si nécessaire. Ne pas laisser traîner.
 5. Le merge est fait par l'auteur après approbation, pas par le relecteur
@@ -600,7 +600,7 @@ Avant chaque push, on vérifie :
    quand le code dépend de la sémantique d'une API externe (parsing, encodage),
    on vérifie avec une vraie requête avant de documenter le comportement dans un
    commentaire ou de l'épingler dans un test.
-7. **Pour tout changement UI, on a vu l'app tourner dans un vrai navigateur** — parcours critiques exercés, preuve jointe à la PR. Les tests et l'analyse statique vérifient la logique, pas le comportement réel.
+7. **Pour tout changement comportemental, on a lancé l'app et exercé les parcours touchés en conditions réelles** — navigateur pour l'UI, vraies requêtes HTTP contre le serveur lancé pour l'API/back — preuve jointe à la PR. N/A seulement s'il n'y a rien à lancer (docs, config), motif écrit dans la PR. Les tests et l'analyse statique vérifient la logique, pas le comportement réel.
 
 **Règle** : on ne demande pas à un pair de relire du code qu'on n'a pas relu soi-même.
 Un test unitaire qui épingle uniquement sa propre sortie attendue reste vert tout
