@@ -23,7 +23,7 @@ Une méthode claire, disciplinée et actionnable — construite sur le terrain, 
 
 **Responsabilité Intégrale** — On assume avant de chercher un coupable.
 
-**Le cadre libère** — Les procédures claires libèrent l'esprit pour l'essentiel.
+**Rapides, sereins, fiables** — Les procédures claires libèrent l'esprit pour l'essentiel.
 
 **Agir plutôt qu'attendre** — On avance avec ce qu'on a, on s'ajuste en chemin.
 

@@ -62,7 +62,7 @@ La méthode est la même dans tous les formats. Seul le rythme change.
 | **M1** | Responsabilité Intégrale | 1h30 | Les 5 attitudes. Assumer. Écouter. Simplifier. Avancer ensemble. |
 | **M2** | Les Équilibres | 1h | 7 équilibres du leadership technique. Quand tenir, quand lâcher. |
 | **M3** | Agir plutôt qu'attendre | 45 min | Endurer sans brûler. Agir sans témérité. |
-| **M4** | Le cadre libère | 1h30 | Les procédures : 17 procédures, leur logique, comment les adapter |
+| **M4** | Rapides, sereins, fiables | 1h30 | Les procédures : 17 procédures, leur logique, comment les adapter |
 | **M5** | Arriver sur un projet | 1h | La fiche projet, les accès, les 5 questions du jour 1 |
 | **M6** | Communiquer comme un pro | 1h | CR de réunion, CR téléphonique, rapport hebdo, gestion du client |
 | **M7** | Livrer sans stress | 1h | Checklist de livraison, procès-verbal, débrief post-livraison |
@@ -91,7 +91,7 @@ Une méthode pratique, construite sur le terrain, par des développeurs qui inte
 
 **Responsabilité Intégrale** — Quand ça ne marche pas, la question n'est pas "Qui a fait quoi ?" mais "Qu'est-ce que j'ai laissé passer ?". On assume avant de chercher un coupable.
 
-**Le cadre libère** — Les procédures claires libèrent l'esprit pour se concentrer sur l'essentiel. On ne réinvente pas la roue à chaque projet.
+**Rapides, sereins, fiables** — Les procédures claires libèrent l'esprit pour se concentrer sur l'essentiel. On ne réinvente pas la roue à chaque projet.
 
 **Agir plutôt qu'attendre** — Quand on ne sait pas quoi faire, on fait quelque chose. On avance avec ce qu'on a, on s'ajuste en chemin.
 
@@ -155,7 +155,7 @@ Un développeur senior rejette une PR pour un détail de style quand le fond est
 
 ---
 
-### 1.3 — Believe : Croire en la mission
+### 1.3 — On ne travaille pas à l'aveugle
 
 On ne peut pas livrer avec conviction si on ne sait pas pourquoi on fait ce qu'on fait.
 
@@ -168,7 +168,7 @@ Si la réponse est floue, on creuse. Si la mission ne tient pas la route, on le 
 
 ---
 
-### 1.4 — Unis pour avancer : On soutient celui qui avance
+### 1.4 — On ne laisse personne seul sous le feu
 
 La Responsabilité Intégrale ne fonctionne pas seule. Elle fonctionne parce qu'on se couvre mutuellement.
 
@@ -295,7 +295,7 @@ Ce n'est pas de la témérité. C'est de l'action calculée.
 ---
 ---
 
-# MODULE 4 — LE CADRE LIBÈRE
+# MODULE 4 — RAPIDES, SEREINS, FIABLES
 ## Les Procédure : 17 Procédures Opérationnelles
 
 **Durée** : 1h30
@@ -604,7 +604,7 @@ Une application tombe en panne. L'équipe suit la Procédure d'incident : stabil
 
 ### 10.1 — L'Auto-Évaluation (Modèle fourni)
 
-À remplir individuellement toutes les 4-6 semaines, puis partager en équipe. 4 domaines : Responsabilité Intégrale, Les Équilibres, Le cadre libère, Agir plutôt qu'attendre. Plus une réflexion libre.
+À remplir individuellement toutes les 4-6 semaines, puis partager en équipe. 4 domaines : Responsabilité Intégrale, Les Équilibres, Rapides, sereins, fiables, Agir plutôt qu'attendre. Plus une réflexion libre.
 
 **Format** : échelle Jamais → Rarement → Parfois → Souvent → Toujours. Puis discussion en équipe. Pas de jugement. Juste de la clarté.
 

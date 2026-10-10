@@ -13,9 +13,9 @@ Code review and quality assurance grounded in the Charte d'Excellence — a fiel
 
 **Maitriser son ego** — Defend ideas with arguments, not ego. Admit when wrong. Listen when a junior corrects you.
 
-**Unis pour avancer** — Cover your teammate. A code review is support, not surveillance.
+**On ne laisse personne seul sous le feu** — Cover your teammate. A code review is support, not surveillance.
 
-**Le cadre libere** — Clear procedures free the mind for what matters. No reinventing the wheel each sprint.
+**Rapides, sereins, fiables** — Clear procedures free the mind for what matters. No reinventing the wheel each sprint.
 
 **Agir plutot qu'attendre** — Review within hours, not days. A PR that sits unreviewed blocks the whole team.
 

@@ -22,6 +22,8 @@ Les modèles sont organisés selon le parcours type d'une intervention : **entr�
 | Modèle | Quand l'utiliser |
 |---|---|
 | **Fiche projet à l'arrivée** | Première semaine sur un nouveau projet |
+| **Pitch de cadrage** | Avant tout engagement sur un périmètre nouveau (mission, gros lot, refonte) |
+| **Parcours client de mission** | À l'arrivée sur la mission, relu au premier Débrief du mois |
 
 ### B — En cours de mission
 
@@ -113,6 +115,68 @@ ________________________________________________________________________
 ---
 
 *Cette fiche est vivante. On la met à jour quand on découvre quelque chose de nouveau.*
+
+---
+---
+
+## PITCH DE CADRAGE
+
+*Procédure liée : Procédure 18 — Cadrage de mission*
+
+### À écrire avant tout engagement sur un périmètre nouveau. Une page, pas plus.
+
+**Projet :** _________________________ **Client :** _________________________
+**Date :** _________________________ **Rédacteur :** _________________________
+
+---
+
+### 1. Problème (ce que vit le client aujourd'hui)
+________________________________________________________________________
+
+### 2. Appétit (ce que ça mérite)
+Temps : _______________ Budget : _______________ Décideur : _______________
+
+### 3. Esquisse (la forme de la solution, volontairement grossière)
+________________________________________________________________________
+
+### 4. Rabbit holes (zones à encercler avant d'entrer)
+- [ ] _________________________
+- [ ] _________________________
+
+### 5. Non-objectifs (ce qu'on ne fait pas dans ce périmètre)
+- [ ] _________________________
+
+### 6. Découpage en lots livrables
+| Lot | Livrable visible | Fin estimée |
+|---|---|---|
+|   |   |   |
+
+---
+
+*Signé par le client avant le premier commit de cadrage. Si la page ne se remplit pas, la mission n'est pas cadrable — on creuse ou on refuse (Chapitre VIII).*
+
+---
+---
+
+## PARCOURS CLIENT DE MISSION
+
+*Procédure liée : Procédure 19 — Moments de vérité*
+
+### À remplir à l'arrivée sur la mission. Relu au premier Débrief du vendredi du mois.
+
+**Projet :** _________________________ **Rempli le :** _________________________ **Relu le :** _________________________
+
+| Moment | Ce que le client juge | Ce qu'on fait | Preuve | Manque |
+|---|---|---|---|---|
+| Première demande | | Réponse sous 24h | CR d'appel | |
+| Cadrage | | Pitch signé | Pitch de cadrage | |
+| Premier livrable | | Succès visible livré tôt | Démo / lien | |
+| Incident | | Stabiliser, communiquer, résoudre | CR d'incident | |
+| Renouvellement / passation | | État final + passation explicites | Passation | |
+
+---
+
+*La colonne « Manque » alimente directement les actions du Débrief du vendredi. Sur les petites missions, la carte se réduit aux colonnes « Moment / Ce qu'on fait / Preuve ».*
 
 ---
 ---
@@ -368,7 +432,7 @@ ________________________________________________________________________
 | Je suis proactif sans être téméraire | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Je couvre les autres quand ils en ont besoin | ☐ | ☐ | ☐ | ☐ | ☐ |
 
-#### 3. Le cadre libère
+#### 3. Rapides, sereins, fiables
 | Question | Jamais | Rarement | Parfois | Souvent | Toujours |
 |----------|--------|----------|---------|---------|----------|
 | Mes revues de code sont rigoureuses et constructives | ☐ | ☐ | ☐ | ☐ | ☐ |
