@@ -57,9 +57,9 @@ Je donne un exemple réel. Le mien. Je montre que je ne suis pas au-dessus de ç
 
 **Maîtriser son ego** — L'ego aveugle. Admettre ses erreurs, écouter quand on a tort, changer d'avis quand un junior nous corrige. C'est une force, pas une faiblesse.
 
-**Croire en la mission** — On ne travaille pas à l'aveugle. On demande toujours : quel est le besoin métier ? Pourquoi cette fonctionnalité ? Si la réponse est floue, on creuse.
+**On ne travaille pas à l'aveugle** — On ne travaille pas à l'aveugle. On demande toujours : quel est le besoin métier ? Pourquoi cette fonctionnalité ? Si la réponse est floue, on creuse.
 
-**Unis pour avancer** — On se soutient mutuellement. Quand un membre est sous l'eau, les deux autres le couvrent. Quand le PO est débordé, on prend le relai. On avance ensemble.
+**On ne laisse personne seul sous le feu** — On se soutient mutuellement. Quand un membre est sous l'eau, les deux autres le couvrent. Quand le PO est débordé, on prend le relai. On avance ensemble.
 
 **Simple** — Les plans complexes échouent. On rend les choses simples. Si on ne peut pas expliquer une décision en deux phrases, elle est trop complexe.
 

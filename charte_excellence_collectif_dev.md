@@ -1,6 +1,8 @@
 # CHARTE D'EXCELLENCE
 ## Le Livre de Service du Collectif de Développement
 
+**Version 3 — Excellence de Service** · Adoptée le _______________
+
 ---
 
 ## PRÉAMBULE
@@ -40,14 +42,14 @@ On défend nos idées avec des arguments. Quand on a tort, on le dit. Quand un j
 
 > **Exemple réel** : On a tous vécu ce moment où on s'obstine sur une approche technique parce qu'on l'a proposée. On perd 2 heures à défendre une mauvaise idée. Maîtriser son ego, c'est dire : « J'avais tort. Ton approche est meilleure. On fait comme ça. »
 
-### Croire en la mission
+### On ne travaille pas à l'aveugle
 On ne peut pas livrer avec conviction si on ne sait pas pourquoi on fait ce qu'on fait. Quand on arrive sur un projet, on demande : quel est le besoin métier ? Quel problème le client essaie de résoudre ? Pourquoi cette fonctionnalité et pas une autre ?
 
 Si la réponse est floue, on creuse. Si la mission ne tient pas la route, on le dit au client. **On ne travaille pas à l'aveugle. On travaille avec un but.**
 
 Ça se vérifie chaque vendredi au Débrief : la cinquième question est exactement ça — « L'équipe sait-elle pourquoi nous faisons ce que nous faisons ? »
 
-### Unis pour avancer — On soutient celui qui avance
+### On ne laisse personne seul sous le feu
 La Responsabilité Intégrale ne fonctionne pas seule. Elle fonctionne parce qu'on se soutient mutuellement.
 
 **Avec l'équipe client**, au jour le jour : quand le PO est débordé, on prend le relai sur la clarification des specs. Quand le lead technique est absent, on valide les choix techniques entre nous. Quand le client ne sait pas ce qu'il veut, on propose plutôt qu'on attende. **On avance ensemble. On ne laisse personne seul sous le feu.**
@@ -121,7 +123,7 @@ On se prépare. On se protège. Et on avance.
 
 ---
 
-## CHAPITRE IV — LE CADRE LIBÈRE
+## CHAPITRE IV — RAPIDES, SEREINS, FIABLES
 
 | Le cadre | Liberté qu'il génère |
 |---|---|
@@ -158,6 +160,8 @@ Quand la procédure est claire, nous n'avons pas besoin de réfléchir à commen
 - Documentation
 - Gestion d'incident
 - Priorisation sous pression
+- Cadrage de mission
+- Moments de vérité client
 
 **Techniques** — chaque jour :
 - Messages de commit (Conventional Commits)
@@ -200,7 +204,7 @@ Après chaque sprint, chaque release, chaque livraison en production — réussi
 Quand il y a un impact grave — données perdues, indisponibilité longue, client impacté, réputation en jeu — on sort le grand jeu. Pas de blâme, mais pas de légèreté non plus. On investigate. Voir les **Modèles Opérationnels — Post-Mortem**.
 
 ### La Revue de Charte
-Tous les trois mois, on relit cette charte ensemble. Dix minutes. On la garde, on l'adapte, ou on en jette des bouts. Elle est vivante. Mais elle ne s'affaiblit pas par lassitude.
+Tous les trois mois, on relit cette charte ensemble. Dix minutes. On la garde, on l'adapte, ou on en jette des bouts. Elle est vivante. Mais elle ne s'affaiblit pas par lassitude. Toute évolution donne lieu à une entrée dans `historique_versions.md`, rédigée pendant la Revue — pas après coup.
 
 ---
 
@@ -229,7 +233,7 @@ Quand on s'engage sur une action en rétrospective ou en retour d'expérience, o
 
 ## CHAPITRE VII — NOTRE ARTISANAT
 
-### Prioriser et avancer
+### Un seul sujet à la fois
 Face à la surcharge : identifier le sujet le plus critique, agir, passer au suivant. Un seul à la fois. Pas trois en parallèle en se disant qu'on gère.
 
 ### Découper et maîtriser
@@ -239,6 +243,30 @@ Face à une complexité écrasante : découper en morceaux indépendants, un res
 
 ### Guider par l'intention
 Celui qui porte le sujet clarifie le « pourquoi » et le « quoi ». Celui qui l'exécute choisit le « comment ». Si le « comment » échoue, celui qui a porté le sujet assume. S'il réussit, celui qui l'a fait est crédité.
+
+---
+
+## CHAPITRE VIII — L'EXCELLENCE DE SERVICE
+
+### Le principe
+Le client ne juge pas notre code. Il juge la demande qu'il a envoyée un mardi soir, l'attente, le premier livrable, l'incident, le renouvellement. Notre discipline interne ne vaut rien si le service, vu de sa chaise, est médiocre. **On ne livre pas du code. On livre un service.**
+
+### Cadrer avant de construire
+Aucune mission ne commence sans un problème énoncé et un appétit fixé : combien de temps, combien d'argent, cette bataille vaut-elle d'être menée ? On n'accepte pas un scope ouvert. Si le problème n'est pas assez clair pour tenir en une page, on n'a pas encore compris la mission — on creuse, ou on refuse.
+
+### Les moments de vérité
+Cinq instants décident de toute la relation. On les prépare comme des livraisons :
+
+- **La première demande** — réponse sous 24h, même sans solution. On ne laisse jamais un client parler dans le vide.
+- **Le cadrage** — une page écrite : problème, appétit, périmètre, non-objectifs. Signée par le client avant de construire.
+- **Le premier livrable** — le plus petit succès visible, livré tôt. La confiance ne se décrète pas, elle se démontre.
+- **L'incident** — le client apprend qui on est vraiment. On stabilise, on communique avant qu'il ne découvre, on résout, on apprend.
+- **Le renouvellement ou la passation** — un client qui repart sait exactement ce qu'il a reçu, ce qui reste, et comment continuer sans nous.
+
+### Test
+Si on ne peut pas décrire ce que le client juge à chacune de ces étapes, on ne maîtrise pas encore sa mission.
+
+Le détail vit dans la **Procédure 18 (Cadrage de mission)** et la **Procédure 19 (Moments de vérité)** — Annexe C — et dans les Modèles Opérationnels (**Pitch de cadrage**, **Parcours client de mission**).
 
 ---
 
@@ -283,6 +311,10 @@ On n'est pas des héros. On est des professionnels. On ne demande pas d'être pa
 | **Plan de Secours** | Procédure documentée et testée permettant de revenir à l'état stable en cas d'échec de la livraison. |
 | **Procédure** | Procédure opérationnelle standard, ligne de base adaptable selon le contexte. |
 | **Spike** | Investigation technique de courte durée (max 2 jours) pour trancher une décision. |
+| **Appétit** | Le budget de temps/argent qu'un problème mérite, fixé avant le scope. C'est lui qui tranche les arbitrages. |
+| **Pitch de cadrage** | Une page : problème, appétit, esquisse, rabbit holes, non-objectifs. Signée avant de construire. |
+| **Moment de vérité** | Instant de la relation où le client juge le service (demande, cadrage, premier livrable, incident, renouvellement). On les prépare comme des livraisons. |
+| **Excellence de Service** | La doctrine du service rendu — complément de la Responsabilité Intégrale (posture interne). |
 
 ---
 
@@ -471,7 +503,7 @@ Nos rituels réguliers, ceux qui cadencent notre travail et maintiennent notre a
 
 **Règle d'or** : on ne laisse jamais le client dans le flou. Même quand on n'a pas de nouvelles, on dit qu'on n'a pas de nouvelles.
 
-On applique le principe Unis pour avancer (Chapitre I) avec l'équipe client : quand le PO est débordé, on clarifie les specs. Quand le lead technique est absent, on valide les choix techniques entre nous. On avance ensemble. On ne laisse personne seul sous le feu.
+On applique le principe On ne laisse personne seul sous le feu (Chapitre I) avec l'équipe client : quand le PO est débordé, on clarifie les specs. Quand le lead technique est absent, on valide les choix techniques entre nous. On avance ensemble. On ne laisse personne seul sous le feu.
 
 1. **Après chaque réunion** : CR envoyé dans l'heure (Modèles Opérationnels, Compte-rendu de réunion)
 2. **Après chaque appel** : CR envoyé dans l'heure (Modèles Opérationnels, Compte-rendu de point téléphonique)
@@ -730,6 +762,40 @@ Ce n'est pas un entretien d'embauche. Nous ne sommes pas des candidats. Nous som
 - Ne pas prévoir de marge pour l'imprévu (règle : +30% sur un projet inconnu)
 
 **Déviation autorisée** : pour un prospect connu et de confiance, on peut donner une fourchette orale immédiate, suivie d'un email récapitulatif sous 24h.
+
+---
+
+### Procédure 18 — Cadrage de mission
+
+**Quand** : avant tout engagement sur un périmètre nouveau (mission, gros lot, refonte). Pas sur un hotfix.
+
+**La méthode** :
+1. **Énoncer le problème** en une page : ce que le client vit aujourd'hui, ce que ça lui coûte (temps, argent, clients perdus). Si la page ne s'écrit pas, la mission n'est pas cadrable — on reformule l'entretien (Procédure 12) ou on refuse.
+2. **Fixer l'appétit** : combien de temps, combien d'argent ce problème mérite. L'appétit précède le scope : c'est lui qui tranche les arbitrages, jamais l'inverse.
+3. **Esquisser la solution** à mains levées : assez claire pour en discuter, trop grossière pour être un cahier des charges.
+4. **Nommer les rabbit holes** : les zones connues pour absorber des semaines (migration, edge case, dépendance externe). On les encercle avant d'entrer.
+5. **Écrire les non-objectifs** : ce qu'on ne fait pas dans ce périmètre. Le client signe le tout — Pitch de cadrage (Modèles Opérationnels).
+6. **Découper en lots livrables** : chaque lot se termine par quelque chose de visible.
+
+**Déviation autorisée** : sur une mission de moins de 5 jours, le pitch tient en trois lignes dans un email. Mais il existe, et il est écrit.
+
+---
+
+### Procédure 19 — Moments de vérité
+
+**Quand** : à la prise de mission, on cartographie les cinq moments (Parcours client de mission — Modèles Opérationnels). Ensuite, chacun se pilote avec sa procédure liée :
+
+| Moment | Ce qui doit être vrai | Procédure liée |
+|---|---|---|
+| Première demande | Réponse sous 24h ; CR d'appel dans l'heure | 12 |
+| Cadrage | Pitch écrit, signé, appétit fixé | 18 |
+| Premier livrable | Succès visible identifié dès l'entretien initial, livré tôt | 15, 2 |
+| Incident | Client informé avant qu'il ne découvre ; débrief systématique | 7 |
+| Renouvellement / passation | État final et passation explicites, rien d'implicite | 4, 6 |
+
+La carte du parcours est relue au premier Débrief du vendredi du mois. La colonne « Manque » alimente directement les actions du Débrief.
+
+**Déviation autorisée** : sur les petites missions, la carte se réduit aux colonnes « Moment / Ce qu'on fait / Preuve ».
 
 ---
 

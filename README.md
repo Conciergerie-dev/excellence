@@ -10,11 +10,12 @@ La doctrine du collectif : une charte d'excellence, ses modèles opérationnels,
 
 | Fichier | Rôle |
 |---|---|
-| `charte_excellence_collectif_dev.md` | La charte : principes (responsabilité intégrale, maîtrise de l'ego, agir plutôt qu'attendre, cadre libère), rituels (débrief du vendredi, debrief post-livraison, post-mortem) et les 17 procédures |
+| `charte_excellence_collectif_dev.md` | La charte : principes (responsabilité intégrale, maîtrise de l'ego, agir plutôt qu'attendre, excellence de service), rituels (débrief du vendredi, debrief post-livraison, post-mortem) et les 19 procédures |
 | `modeles_operationnels.md` | Le kit de service : modèles prêts à l'emploi (post-mortem, comptes-rendus, checklist de livraison, ADR, fiches projet…) |
 | `guide_accueil_charte.md` | Guide de conversation pour présenter la charte à quelqu'un qui rejoint le collectif |
 | `guide_animation_retour.md` | Aide-mémoire pour animer un retour d'expérience à trois |
 | `plan_formation_excellence.md` | Plan de formation vers l'excellence |
+| `historique_versions.md` | La généalogie des versions de la charte (V1 → V3), maintenue à chaque Revue de Charte |
 
 ### La méthode commerciale (documents racine)
 
@@ -25,13 +26,16 @@ La doctrine du collectif : une charte d'excellence, ses modèles opérationnels,
 
 ### Le plugin Kimi Code (`skills/`, `kimi.plugin.json`)
 
-Trois skills qui enseignent la doctrine aux agents IA :
+Six skills qui enseignent la doctrine aux agents IA :
 
 | Skill | Usage |
 |---|---|
 | `using-excellence` | Chargé au démarrage de chaque session (`sessionStart`). Établit la doctrine et route vers le bon skill ou document avant toute action |
 | `excellence-principles` | Doctrine générale : posture et jugement pour les situations de mission (incidents, retards, communication client, projets legacy, priorisation, désaccords) |
 | `code-review-excellence` | Revue de code et qualité : procédures de review, checks pre-push, checklist de livraison — avec la nuance code interne (nos conventions) / externe (celles du client) |
+| `planner-excellence` | Disciplines la phase de conception : vérifier les comportements framework avant de les prescrire, réviser les plans en cas de doute, découper les plans surdimensionnés, prévoir la vérification manuelle de ce que seul un navigateur montre |
+| `framing-excellence` | Cadre les missions selon la Procédure 18 : problème énoncé, appétit fixé, rabbit holes et non-objectifs écrits avant de construire (Pitch de cadrage) |
+| `service-excellence` | Veille sur les cinq moments de vérité du service rendu : première réponse, cadrage, premier livrable, incident, renouvellement (Procédure 19) |
 
 ## Installation du plugin
 

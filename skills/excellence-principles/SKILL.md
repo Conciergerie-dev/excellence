@@ -15,11 +15,11 @@ Full source: `charte_excellence_collectif_dev.md` (principles, rituals, 17 proce
 |---|---|
 | **Responsabilite Integrale** | Ask "What did *I* let through?" before citing the client, the PO, the framework, or a teammate. Never blame externals — above all never a member of the collectif. |
 | **Maitriser son ego** | Defend ideas with arguments. Say "I was wrong" fast. Support a collective decision once taken, even against your own opinion. |
-| **Unis pour avancer** | Cover whoever is under water. Covering = removing pressure, not doing their job. Never let the client discover internal frictions before we resolved them. |
-| **Croire en la mission** | No blind work. Dig until the business need is clear; if the mission doesn't hold up, say so to the client. |
+| **On ne laisse personne seul sous le feu** | Cover whoever is under water. Covering = removing pressure, not doing their job. Never let the client discover internal frictions before we resolved them. |
+| **On ne travaille pas à l'aveugle** | No blind work. Dig until the business need is clear; if the mission doesn't hold up, say so to the client. |
 | **Simple — Simplifier** | If a decision can't be explained in two sentences to an outsider, it's too complex. Keep complexity only when justified. |
 | **Agir plutot qu'attendre** | When unsure, act with what you have and adjust. Indecision costs more than a reversible wrong decision. But never deploy without a tested rollback plan. |
-| **Le cadre libere** | Procedures are baselines to deviate from intelligently, not chains. Match rigor to mission size. |
+| **Rapides, sereins, fiables** | Procedures are baselines to deviate from intelligently, not chains. Match rigor to mission size. |
 
 ## Responsabilité Intégrale — In Practice (for agents)
 

@@ -35,14 +35,14 @@ Ce plan n'est pas une formation en salle. C'est un **parcours d'application** : 
 
 ### Semaine 1 — On assume
 
-**À lire** : Charte, Chapitre I — Responsabilité Intégrale (tout : le principe, Maîtriser son ego, Croire en la mission, Unis pour avancer, Simple)
+**À lire** : Charte, Chapitre I — Responsabilité Intégrale (tout : le principe, Maîtriser son ego, On ne travaille pas à l'aveugle, On ne laisse personne seul sous le feu, Simple)
 
 **À pratiquer sur sa mission** :
 - Chaque fois qu'un problème survient, poser la question : *« Qu'est-ce que j'ai laissé passer ? »* au lieu de chercher un coupable.
-- Tenir un petit carnet (ou un fichier texte) : 3 situations où on a appliqué EO, 1 où on a oublié.
+- Tenir un petit carnet (ou un fichier texte) : 3 situations où on a appliqué la Responsabilité Intégrale, 1 où on a oublié.
 
 **Exercice collectif** (30 min, visio ou autour d'une bière) :
-- Chacun partage sa situation EO de la semaine. Pas de jugement, juste des faits.
+- Chacun partage sa situation de Responsabilité Intégrale de la semaine. Pas de jugement, juste des faits.
 - On se met d'accord sur le rituel : le Débrief du vendredi commence quand ? Où ? (canal Slack, email, visio ?)
 
 > *« Règle numéro deux : pas de noms. »* — Frank Martin, *Le Transporteur*
@@ -51,7 +51,7 @@ Ce plan n'est pas une formation en salle. C'est un **parcours d'application** : 
 
 ### Semaine 2 — On se discipline
 
-**À lire** : Charte, Chapitre IV — Le cadre libère (les procédures techniques)
+**À lire** : Charte, Chapitre IV — Rapides, sereins, fiables (les procédures techniques)
 
 **À appliquer quotidiennement** :
 - **Procédure 8 — Conventional Commits** : tous les commits de la semaine suivent le format `[type](scope): description`
@@ -76,7 +76,7 @@ Ce plan n'est pas une formation en salle. C'est un **parcours d'application** : 
 - Cette semaine, observer ses propres bascules d'équilibre : suis-je passé de confiant à arrogant ? De prudent à paralysé ? De disponible à envahissant ?
 
 **Exercice collectif** — Point de validation Phase 1 (45 min) :
-- Chacun partage : un moment où EO a changé son approche, un moment où il a galéré avec les procédures techniques.
+- Chacun partage : un moment où la Responsabilité Intégrale a changé son approche, un moment où il a galéré avec les procédures techniques.
 - On valide ensemble : les commits sont propres, les PR sont revues, le Débrief du vendredi a eu lieu.
 - On décide si on continue, si on adapte, ou si on répète une semaine.
 
@@ -178,7 +178,7 @@ Ce plan n'est pas une formation en salle. C'est un **parcours d'application** : 
 **Exercice collectif** — Point de validation Phase 3 (45 min) :
 - Chacun partage : un CR qu'il a envoyé cette semaine (ou un exercice) + son Débrief post-livraison.
 - On valide : la communication client est régulière, les rituels sont ancrés.
-- On discute : a-t-on vécu un moment où Unis pour avancer a fait la différence ?
+- On discute : a-t-on vécu un moment où On ne laisse personne seul sous le feu a fait la différence ?
 
 > *« On progresse, on ne vise pas la perfection. »* — Robert McCall, *The Equalizer*
 
@@ -236,7 +236,7 @@ On est maintenant opérationnels. On arrive sur n'importe quel projet en feu, on
 
 | Semaine | Livrable individuel | Livrable collectif |
 |---------|---------------------|---------------------|
-| 1 | Carnet EO (3 situations) | Choix du canal + règles du Débrief |
+| 1 | Carnet de Responsabilité Intégrale (3 situations) | Choix du canal + règles du Débrief |
 | 2 | Historique git propre (Procédure 8-9-10-11) | Première revue de code selon Procédure 5 |
 | 3 | Bilan des équilibres | **Point de validation Phase 1** |
 | 4 | Fiche projet à l'arrivée remplie | — |
