@@ -31,6 +31,10 @@ A spec spanning multiple independent subsystems, or a task list past ~10 tasks, 
 
 For anything a user does with their hands — UI flows, keyboard shortcuts, file uploads, drag-and-drop, anything LiveViewTest/protractor-style tests cannot express — the final task of the plan is manual verification instructions: a Playwright scenario or numbered steps (URL → actions → expected outcome). Automated tests prove the pipeline; they do not prove the experience. "Tests green + browser check recommended in a review note" is a failure of planning, not of testing.
 
+### 5. Plans prescribe intent, not prose
+
+A plan prescribes what the code must do — never the comments, docstrings, or narrative it should carry. Verbose prescribed prose becomes verbose shipped code (the standard keeps only the non-obvious why, one line). When dispatching implementers, include the implementer dispatch template (`coder-excellence/references/implementer-dispatch-template.md`) in the prompt: implementer subagents do not load session-start skills, so a plan task without that block leaves comment hygiene, guard clauses, and test shape to defaults — and the defaults are what reviewers trim later.
+
 ## Red Flags — STOP
 
 - "I'm confident this attribute/API works like X" (confidence is not verification)
@@ -45,6 +49,7 @@ For anything a user does with their hands — UI flows, keyboard shortcuts, file
 | "Dispatching a reviewer slows the plan down" | A broken plan dispatches every implementer into a wall. Review is cheapest before the first task. |
 | "Splitting adds ceremony" | Ten tasks nobody can hold is the ceremony. Two five-task plans are clarity. |
 | "QA will do the manual pass" | QA tests what the plan says. If the plan says nothing, nothing is tested. |
+| "I'll specify the comments/docstrings in the plan" | Prescribed prose ships as verbose comments. Prescribe intent; include the implementer dispatch template in the dispatch prompt instead. |
 
 ## Quick Reference
 
@@ -54,3 +59,4 @@ For anything a user does with their hands — UI flows, keyboard shortcuts, file
 | Cross-task interaction unclear, or workaround reported | Dispatch explorer/reviewer subagent before implementers |
 | Spec = several subsystems or >10 tasks | Ordered sub-plans, each independently testable |
 | UI/keyboard/upload/browser-only behavior | Final task = Playwright scenario or numbered manual steps |
+| Plan prescribes comments/docstrings, or implementers dispatched | Prescribe intent only; include the implementer dispatch template (`coder-excellence/references/implementer-dispatch-template.md`) in every implementer prompt |

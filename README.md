@@ -11,7 +11,8 @@ La doctrine du collectif : une charte d'excellence, ses modèles opérationnels,
 | Fichier | Rôle |
 |---|---|
 | `charte_excellence_collectif_dev.md` | La charte : principes (responsabilité intégrale, maîtrise de l'ego, agir plutôt qu'attendre, cadre libère), rituels (débrief du vendredi, debrief post-livraison, post-mortem) et les 17 procédures |
-| `modeles_operationnels.md` | Le kit de service : modèles prêts à l'emploi (post-mortem, comptes-rendus, checklist de livraison, ADR, fiches projet…) |
+| `standard_code.md` | Le standard de code : les règles que le code que nous écrivons respecte — commentaires, conformité projet, robustesse, sécurité, i18n, tests, UI, CI, sweep post-refactor — chacune ancrée dans un cas réel |
+| `modeles_operationnels.md` | Le kit de service : modèles prêts à l'emploi (post-mortem, comptes-rendus, checklist de livraison, ADR, description de PR, fiches projet…) |
 | `guide_accueil_charte.md` | Guide de conversation pour présenter la charte à quelqu'un qui rejoint le collectif |
 | `guide_animation_retour.md` | Aide-mémoire pour animer un retour d'expérience à trois |
 | `plan_formation_excellence.md` | Plan de formation vers l'excellence |
@@ -25,12 +26,14 @@ La doctrine du collectif : une charte d'excellence, ses modèles opérationnels,
 
 ### Le plugin Kimi Code (`skills/`, `kimi.plugin.json`)
 
-Trois skills qui enseignent la doctrine aux agents IA :
+Cinq skills qui enseignent la doctrine aux agents IA :
 
 | Skill | Usage |
 |---|---|
 | `using-excellence` | Chargé au démarrage de chaque session (`sessionStart`). Établit la doctrine et route vers le bon skill ou document avant toute action |
 | `excellence-principles` | Doctrine générale : posture et jugement pour les situations de mission (incidents, retards, communication client, projets legacy, priorisation, désaccords) |
+| `coder-excellence` | Écriture de code : les onze règles du standard de code (vérification manuelle d'abord, commentaires qui gagnent leur place, gardes, sécurité, i18n, tests, CI) — avec `standard_code.md` comme référence normative |
+| `planner-excellence` | Phase de conception : vérifier avant de prescrire, réviser en cas de doute, découper, prévoir la vérification manuelle — et prescrire l'intention, jamais la prose |
 | `code-review-excellence` | Revue de code et qualité : procédures de review, checks pre-push, checklist de livraison — avec la nuance code interne (nos conventions) / externe (celles du client) |
 
 ## Installation du plugin

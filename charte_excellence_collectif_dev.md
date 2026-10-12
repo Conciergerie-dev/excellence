@@ -488,7 +488,7 @@ On applique le principe Unis pour avancer (Chapitre I) avec l'équipe client : q
 **Chaque PR doit être revue par au moins 1 pair avant merge.**
 
 1. Lire la PR dans son ensemble avant de commenter ligne par ligne
-2. Vérifier : logique, tests, documentation, style, sécurité évidente — et pour tout changement comportemental dans une app lançable : l'app démarrée, les parcours touchés exercés en conditions réelles (navigateur pour l'UI, vraies requêtes HTTP contre le serveur lancé pour l'API/back), preuve jointe à la PR. N/A seulement s'il n'y a rien à lancer (docs, config), motif explicite.
+2. Vérifier : logique, tests, documentation, style, sécurité évidente — le code écrit par le collectif conforme au standard de code (`standard_code.md` : commentaires, gardes, i18n, discipline de tests) — et pour tout changement comportemental dans une app lançable : l'app démarrée, les parcours touchés exercés en conditions réelles (navigateur pour l'UI, vraies requêtes HTTP contre le serveur lancé pour l'API/back), preuve jointe à la PR. N/A seulement s'il n'y a rien à lancer (docs, config), motif explicite. Sur un projet client, le standard s'applique au code que nous écrivons, jamais au code existant du client.
 3. Commenter avec bienveillance : sur le code, pas sur la personne
 4. Approuver si c'est bon. Demander des changements si nécessaire. Ne pas laisser traîner.
 5. Le merge est fait par l'auteur après approbation, pas par le relecteur
@@ -589,13 +589,14 @@ Nous utilisons **GitHub Flow** par défaut : main branch protégée, feature bra
 Avant chaque push, on vérifie :
 
 1. **Le code compile** / les tests passent en local
-2. **Le linter ne râle pas** (eslint, prettier, black, etc. selon le projet)
+2. **Le linter et l'analyse statique ne râlent pas** (eslint, prettier, black, type-check selon le projet — et détection de code mort quand le stack le permet : `vue/no-unused-properties`, `noUnusedLocals`, `knip`. Sur un projet client sans ces gates, on les lance localement avant push : du code mort attrapé en review, c'est du code mort que la machine voyait depuis le premier push)
 3. **Pas de `console.log` oublié**, pas de TODO sans issue associée
 4. **La PR a un titre clair** et une description si nécessaire
 5. **On a relu son propre code en entier, à froid** — pas un survol :
    - chaque fonction est atteignable de façon significative (pas juste câblée syntaxiquement)
    - chaque prop/emit a sa raison d'être — pas de restes d'une itération antérieure après un refactor en cours de PR
    - pas de forme dupliquée dans plusieurs fichiers qui mériterait un type nommé
+   - rien de retiré par le dernier refactor que rien ne remplace ; commentaires, noms et snapshots disent ce que le code fait maintenant (le standard complet : `standard_code.md`)
 6. **Les hypothèses sur une API externe sont vérifiées en conditions réelles** :
    quand le code dépend de la sémantique d'une API externe (parsing, encodage),
    on vérifie avec une vraie requête avant de documenter le comportement dans un

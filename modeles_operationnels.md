@@ -32,6 +32,7 @@ Les modèles sont organisés selon le parcours type d'une intervention : **entr�
 | **Rapport d'état hebdomadaire** | Chaque vendredi, à destination du client ou du PO |
 | **Documentation rapide** | Quand on a compris un système complexe et qu'on veut capitaliser avant d'oublier |
 | **Architecture Decision Record (ADR)** | Quand on prend une décision technique structurante |
+| **Description de PR** | À l'ouverture de chaque PR — le corps de la PR fait partie du livrable |
 | **Grille d'auto-évaluation** | Toutes les 4-6 semaines, en individuel puis en discussion |
 
 ### C — Sortie et livraison
@@ -400,6 +401,43 @@ ________________________________________________________________________
 
 *À remplir seul, puis partager en discussion à trois. Pas de jugement. Juste de la clarté.*
 
+---
+---
+
+## DESCRIPTION DE PR
+
+### À rédiger à l'ouverture de chaque PR — le corps de la PR fait partie du livrable
+
+La description sert trois lecteurs : le relecteur (il comprend l'intention avant de juger
+l'implémentation), le futur mainteneur (l'historique git est souvent la seule documentation),
+et l'exploitant (ce qui doit exister *avant* le déploiement).
+
+### Ce qui change
+
+[En quelques puces, le comportement livré — ce qu'un utilisateur ou un consommateur d'API observe.]
+
+### Points d'attention
+
+[Changement de contrat API, renommage, comportement modifié pour les consommateurs existants,
+décisions dérivant de la spec initiale — tout ce qu'un relecteur doit savoir avant de lire le code.]
+
+### Infra / déploiement
+
+[Ce qui doit exister ou être fait avant de déployer : buckets, variables d'env, migrations,
+configuration reverse proxy. Ne rien écrire ici, c'est un push en prod qui échoue.]
+
+### Hors scope volontaire (follow-ups liés)
+
+[Ce qui est délibérément exclu, avec un lien vers l'issue ou la PR de suivi pour chaque point.
+« On verra plus tard » sans lien, c'est du scope perdu.]
+
+### Vérification en conditions réelles
+
+[Preuve du run manuel : captures, scénario Playwright, transcript de requêtes — voir Proc. 11.7.
+N/A seulement si rien à lancer, motif écrit.]
+
+---
+*Règle : une PR sans description lisible n'est pas prête à être relue. Quatre sections vides valent mieux qu'une absence — elles disent ce qui reste à préciser.*
 ---
 ---
 
