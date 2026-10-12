@@ -24,6 +24,7 @@
    - Tests coverage (new code has tests, existing tests still pass)
    - Documentation (README, API docs, inline comments if needed)
    - Style consistency with **project conventions** (not ours — theirs if external)
+   - Coding-standard conformity for code **we** wrote (comments, guards, i18n, test discipline — `standard_code.md`); never judge the client's pre-existing code against our standard
    - Obvious security issues (SQL injection, XSS, exposed secrets, unsafe deserialization)
    - **Live verification**: the app launched, the flows touched by the PR exercised in real conditions — browser for UI changes, real HTTP requests against the running server for API/back-end changes — evidence attached to the PR. Tests and static analysis verify logic, not behavior in real conditions. See [Live verification](#live-verification).
 3. **Comment with kindness**: on the code, not the person. Suggest, don't command. Ask questions before asserting.
@@ -51,15 +52,17 @@ On critical hotfix, the lead can merge their own PR after quick review. But they
 **Before every push, verify**:
 
 1. **Code compiles** / tests pass locally
-2. **Linter is clean** (eslint, prettier, black, etc. per project)
+2. **Linter and static analysis are clean** (eslint, prettier, black, type-check per project — plus unused-code detection where the stack allows: `vue/no-unused-properties`, `noUnusedLocals`, `knip`. On a client project without these gates, run them locally before pushing: dead code caught in review is dead code the machine saw first)
 3. **No `console.log` left behind**, no TODO without linked issue
 4. **PR has a clear title** and description if needed
 5. **You have re-read your own code as a cold diff pass**, not a skim:
    - every function is meaningfully reachable — not just syntactically wired
    - every prop/emit earns its place — no leftovers from an earlier design iteration after a mid-PR refactor
    - no shape duplicated across files that should be one named type
+   - nothing removed by the last refactor that nothing replaces; comments, names, test titles, and snapshots say what the code actually does now
 6. **External API assumptions verified live**: when the code depends on an external API's parsing or semantics, verify with one real request before documenting the behavior in a comment or pinning it in a test.
 7. **You have launched the app and exercised the flows this change touches** — browser for UI changes, real HTTP requests against the running server for API/back-end changes — evidence attached to the PR. N/A only when there is genuinely nothing to run (docs-only, config-only), and the reason is stated. See [Live verification](#live-verification).
+8. **Code written by us conforms to the coding standard** (`standard_code.md` / `coder-excellence`): comment hygiene, project conformity, input guards, security-class coverage, i18n, test discipline, CI hygiene. On external projects the standard applies to code we write — never a rewrite of the client's existing code.
 
 **Rule**: Do not ask a peer to review code you have not reviewed yourself.
 A unit test that only pins your own expected output stays green while being wrong — pin behavior (round-trip: simulate the consumer's decode), not output strings.

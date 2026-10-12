@@ -23,6 +23,7 @@ Then announce "Using [skill/doc] to [purpose]" and follow it.
 
 | Situation | Apply |
 |-----------|-------|
+| Writing or editing code, tests, or CI config — with or without a plan | `coder-excellence` for the standards (with `standard_code.md` as the normative reference) |
 | Code review, PR, commits, pre-push, deploy readiness | `code-review-excellence` for the standards — combined with `superpowers:requesting-code-review` for the dispatch process when a reviewer subagent is used |
 | Finishing implementation, preparing a PR, or about to hand work to a human reviewer — including mid-plan or end of plan execution (executing-plans, subagent-driven-development, dispatching-parallel-agents) | `code-review-excellence` (author self-check, Procedere 11) — combined with `superpowers:requesting-code-review` for the dispatch before the human review |
 | Any mission judgment — incident, delay, client communication, legacy project, overload, disagreement | `excellence-principles` skill |

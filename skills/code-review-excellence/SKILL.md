@@ -38,15 +38,17 @@ If the client has no conventions and asks for ours, offer them as recommendation
 
 Before requesting a review, the author verifies:
 1. Code compiles / tests pass locally
-2. Linter is clean (eslint, prettier, black, etc.)
+2. Linter and static analysis are clean (eslint, prettier, black, type-check per project — plus unused-code detection where the stack allows: `vue/no-unused-properties`, `noUnusedLocals`, `knip`; on client projects without these gates, run them locally before pushing)
 3. No `console.log` left behind, no TODO without linked issue
 4. PR title is clear, description added if needed
 5. Author has re-read their own code as a **cold diff pass**, not a skim:
    - every function is meaningfully reachable — not just syntactically wired
    - every prop/emit earns its place — no leftovers from an earlier design iteration after a mid-PR refactor
    - no shape duplicated across files that should be one named type
+   - nothing removed by the last refactor that nothing replaces; wording (comments, names, test titles, snapshots) follows the code as it shipped
 6. External API assumptions verified live: when the code depends on an external API's parsing or semantics, verify with one real request before documenting the behavior in a comment or pinning it in a test.
 7. App launched and flows touched by the change exercised in real conditions — browser for UI changes, real HTTP requests against the running server for API/back-end changes — evidence attached to the PR (see [Live verification](references/external-procedures.md#live-verification))
+8. **Code written by us conforms to the coding standard** (`standard_code.md` / `coder-excellence`): comment hygiene, project conformity, guards, security-class coverage, i18n, test discipline, CI hygiene. On external projects the standard applies to code we write — never a rewrite of the client's existing code.
 
 > **Rule**: Do not ask a peer to review code you have not reviewed yourself.
 > A unit test that only pins your own expected output stays green while being wrong — pin behavior (round-trip: simulate the consumer's decode), not output strings.
@@ -54,7 +56,7 @@ Before requesting a review, the author verifies:
 ### Step 2 — Review the PR (Procedere 5)
 
 1. **Read the PR as a whole** before commenting line by line
-2. **Verify**: logic, tests, documentation, style, obvious security issues — and launch the app: the flows this PR touches exercised in real conditions (browser for UI changes, real HTTP requests against the running server for API/back-end changes), evidence attached (see [Live verification](references/external-procedures.md#live-verification))
+2. **Verify**: logic, tests, documentation, style, obvious security issues, coding-standard conformity for code we wrote (comments, guards, i18n, test discipline — `standard_code.md`) — and launch the app: the flows this PR touches exercised in real conditions (browser for UI changes, real HTTP requests against the running server for API/back-end changes), evidence attached (see [Live verification](references/external-procedures.md#live-verification))
 3. **Comment with kindness**: on the code, not the person
 4. **Approve if good**. Request changes if needed. **Do not let it sit.**
 5. **Merge is done by the author** after approval, not the reviewer
@@ -85,6 +87,8 @@ Before requesting a review, the author verifies:
 | Style issue | "Our convention is X here. Could you align?" |
 | Missing test | "What happens when X? A test would document the edge case." |
 | Architecture concern | "Have you considered X? I might be wrong — tell me if I missed the context." |
+| Verbose or stale comment | "This comment narrates what the code does — the standard keeps only the non-obvious why. Could you trim? (`standard_code.md` §2)" |
+| Missing guard / input shape | "This value can arrive as an array from a repeated query param — worth guarding before use? (`standard_code.md` §5)" |
 | LGTM | "Clean. Approved." |
 
 **Never**: "This is wrong." | "You should have..." | "Why did you..."
@@ -123,6 +127,11 @@ Review standards (Charte d'Excellence):
 - Bug found? Frame it as "what did we miss" — on the code, never the
   author. A bug that shipped past review is also yours: "what did I
   let through?"
+- Code written by us (internal or external project) is checked against
+  the coding standard (standard_code.md / coder-excellence): comments,
+  project conformity, input guards, security-class coverage, i18n, test
+  discipline, CI hygiene. On external projects, never flag the client's
+  pre-existing code against our standard — only the code this PR adds.
 - Production-bound? Verify the 16-point delivery checklist.
 - Launch the app and exercise the flows this PR touches in real conditions —
   browser for UI changes (Playwright via Bash, or Playwright MCP when
