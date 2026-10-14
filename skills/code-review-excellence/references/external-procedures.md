@@ -26,6 +26,7 @@
    - Style consistency with **project conventions** (not ours — theirs if external)
    - Coding-standard conformity for code **we** wrote (comments, guards, i18n, test discipline — `standard_code.md`); never judge the client's pre-existing code against our standard
    - Obvious security issues (SQL injection, XSS, exposed secrets, unsafe deserialization)
+   - **CI is the gate for machine checks**: when the project's CI runs build, typecheck, and e2e, the reviewer does not re-run them locally — verify the CI run is green and cite it. A check with no CI gate is the reviewer's to run. Either way, never report a check you did not run (or cite) this round. The reviewer's time goes to what CI can't see: logic, security, design, cold diff.
    - **Live verification**: the app launched, the flows touched by the PR exercised in real conditions — browser for UI changes, real HTTP requests against the running server for API/back-end changes — evidence attached to the PR. Tests and static analysis verify logic, not behavior in real conditions. See [Live verification](#live-verification).
 3. **Comment with kindness**: on the code, not the person. Suggest, don't command. Ask questions before asserting.
 4. **Approve if good**. Request changes if necessary. **Do not let it sit.** A PR unreviewed for 24h is a blocker.
