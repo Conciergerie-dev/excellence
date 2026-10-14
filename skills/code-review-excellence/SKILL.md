@@ -56,7 +56,9 @@ Before requesting a review, the author verifies:
 ### Step 2 — Review the PR (Procedere 5)
 
 1. **Read the PR as a whole** before commenting line by line
-2. **Verify**: logic, tests, documentation, style, obvious security issues, coding-standard conformity for code we wrote (comments, guards, i18n, test discipline — `standard_code.md`) — and launch the app: the flows this PR touches exercised in real conditions (browser for UI changes, real HTTP requests against the running server for API/back-end changes), evidence attached (see [Live verification](references/external-procedures.md#live-verification))
+2. **Verify**: logic, tests, documentation, style, obvious security issues, coding-standard conformity for code we wrote (comments, guards, i18n, test discipline — `standard_code.md`)
+   - **Machine checks — CI is the gate**: on external projects where CI runs build, typecheck, and e2e, the reviewer does not re-run them locally. Check the CI run is green and cite it; a check with no CI gate is the reviewer's to run. Never report a check you did not run (or cite) this round. The reviewer's time goes to what CI can't see: logic, security, design, cold diff
+   - **Launch the app**: the flows this PR touches exercised in real conditions — browser for UI changes, real HTTP requests against the running server for API/back-end changes — evidence attached (see [Live verification](references/external-procedures.md#live-verification))
 3. **Comment with kindness**: on the code, not the person
 4. **Approve if good**. Request changes if needed. **Do not let it sit.**
 5. **Merge is done by the author** after approval, not the reviewer
@@ -103,6 +105,7 @@ PR received
   → Self-reviewed by author? (Proc. 11)
     → Read PR as a whole (Proc. 5)
       → Logic OK? Tests? Doc? Style? Security? Live-verified (app launched, touched flows exercised)?
+        → [EXTERNAL w/ CI gates: build, typecheck, e2e = CI green, not re-run locally]
         → Commits atomic? Format correct? (Proc. 8-9) [INTERNAL only]
           → Branch follows GitHub Flow? (Proc. 10) [INTERNAL only]
             → APPROVE or REQUEST CHANGES (within 4h)
@@ -121,9 +124,13 @@ Review standards (Charte d'Excellence):
     suggestions only, never blockers.
 - Comment on the code, never the person.
   Never "This is wrong" / "You should have" / "Why did you".
-- Re-run the quality checks (linter, tests) on the current HEAD and report
+- Quality checks: re-run the linter and tests on the current HEAD and report
   the actual output. "It was clean last time" is not a verification —
   never report a check you did not run this round.
+  EXCEPTION — EXTERNAL code with CI gates: when CI runs build, typecheck,
+  and e2e, do not re-run them locally. Check the CI run is green and cite
+  it; spend the review on what CI can't check. No CI gate on a check? Then
+  it is yours to run.
 - Bug found? Frame it as "what did we miss" — on the code, never the
   author. A bug that shipped past review is also yours: "what did I
   let through?"
