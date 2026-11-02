@@ -1,0 +1,17 @@
+{
+  "name": "doctrine-excellence",
+  "version": "1.8.0",
+  "description": "Charte d'Excellence du collectif : principes, posture, standard de code, conception et revue de code fondés sur la doctrine excellence (responsabilité intégrale, unis pour avancer, cadre libère).",
+  "author": {
+    "name": "Collectif Excellence"
+  },
+  "repository": "https://github.com/Conciergerie-dev/excellence",
+  "license": "UNLICENSED",
+  "keywords": [
+    "excellence",
+    "doctrine",
+    "code-review",
+    "charte",
+    "collectif"
+  ]
+}

@@ -1,6 +1,6 @@
 # Doctrine Excellence
 
-La doctrine du collectif : une charte d'excellence, ses modèles opérationnels, ses guides d'adoption — et un plugin Kimi Code qui rend la doctrine applicable par les agents IA au quotidien.
+La doctrine du collectif : une charte d'excellence, ses modèles opérationnels, ses guides d'adoption — et un plugin Kimi Code / Claude Code qui rend la doctrine applicable par les agents IA au quotidien.
 
 > **On assume, on s'améliore, on livre.**
 
@@ -46,7 +46,15 @@ Le dossier `skills/` et le manifest `kimi.plugin.json` à la racine constituent 
 # → installer/activer "doctrine-excellence"
 ```
 
-Une fois activé :
+Le même dossier `skills/` est aussi un plugin Claude Code (`.claude-plugin/plugin.json`, avec un marketplace `.claude-plugin/marketplace.json` et un hook `hooks/session-start.sh` qui joue le rôle du `sessionStart` Kimi) :
+
+```bash
+# Depuis Claude Code
+/plugin marketplace add Conciergerie-dev/excellence
+/plugin install doctrine-excellence@excellence
+```
+
+Une fois activé (Kimi ou Claude) :
 
 - `using-excellence` se charge automatiquement à chaque nouvelle session
 - Les autres skills se déclenchent selon le contexte (revue de code, incident, retard, etc.)
@@ -56,4 +64,5 @@ Une fois activé :
 - **La charte est vivante** : relue tous les 3 mois, adaptable — mais elle ne s'affaiblit pas par lassitude
 - Les documents de doctrine sont en **français** ; les skills (lus par les agents) sont en **anglais**
 - Un nouveau skill se teste avant déploiement : scénario de pression sans le skill (baseline) → skill écrit → vérification avec le skill. Pas de skill non testé
-- Tout nouveau dossier sous `skills/` est automatiquement déclaré dans le plugin (`"skills": ["./skills/"]`)
+- Tout nouveau dossier sous `skills/` est automatiquement déclaré dans le plugin (`"skills": ["./skills/"]` côté Kimi, découverte par défaut côté Claude)
+- Une nouvelle version se reporte dans `kimi.plugin.json` **et** `.claude-plugin/plugin.json`

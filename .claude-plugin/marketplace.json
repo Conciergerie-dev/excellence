@@ -1,0 +1,13 @@
+{
+  "name": "excellence",
+  "owner": {
+    "name": "Collectif Excellence"
+  },
+  "plugins": [
+    {
+      "name": "doctrine-excellence",
+      "source": "./",
+      "description": "Charte d'Excellence du collectif : principes, standard de code, conception et revue de code applicables par les agents."
+    }
+  ]
+}
